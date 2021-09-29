@@ -138,6 +138,10 @@ def train(env_name):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--env', default='MountainCar', help='Name of the environment')
+    parser.add_argument('--env', default='MCC', help='Name of the environment')
     args = parser.parse_args()
-    train(env_name=args.env)
+    env_dict = {
+        'MCC': 'MountainCarContinuous-h-v1',
+        'Pv0': 'Pendulum-v0'
+    }
+    train(env_name=env_dict[args.env])
