@@ -13,7 +13,7 @@ writer = SummaryWriter()
 def train(env_name):
     env = gym.make(env_name)
     random_seed = 0
-    if env_name == "Pendulum":
+    if env_name == "Pendulum-v0":
         save_episode = 10  # keep saving every n episodes
         max_episodes = 1000  # max num of training episodes
         render = True
@@ -43,7 +43,7 @@ def train(env_name):
         goal_state = np.array([0, 0])  # final goal state to be achived
         threshold = np.array([np.deg2rad(10), 0.05])  # threshold value to check if goal state is achieved
 
-    elif env_name == "MountainCar":
+    elif env_name == "MountainCarContinuous-h-v1":
         save_episode = 10  # keep saving every n episodes
         max_episodes = 1000  # max num of training episodes
         render = False
