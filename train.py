@@ -19,6 +19,7 @@ def train(env_name):
         render = True
 
         state_dim = 2
+        print('state_dim: ', env.observation_space.shape[0])
         action_dim = env.action_space.shape[0]
 
         # primitive action bounds and offset
